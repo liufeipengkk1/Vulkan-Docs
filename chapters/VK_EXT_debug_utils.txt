@@ -644,7 +644,19 @@ The parameters are passed on to the callback in addition to the
 pname:pUserData value that was defined at the time the messenger was
 registered.
 
+.Valid Usage
+****
+* If pname:pCallbackData\->objectCount is greater than 0, then for
+  each object in pname:pCallbackData\->objects, the value of
+  pname:objectHandle must: not be ename:VK_NULL_HANDLE.
+* If pname:pCallbackData\->objectCount is greater than 0, then for
+  each object in pname:pCallbackData\->objects, the value of
+  pname:objectHandle must: be a Vulkan object of the type associated
+  with the value in its pname:objectType.
+****
+
 include::../validity/protos/vkSubmitDebugUtilsMessageEXT.txt[]
+
 
 --
 
